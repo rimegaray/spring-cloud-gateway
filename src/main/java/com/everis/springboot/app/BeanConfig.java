@@ -17,6 +17,12 @@ public class BeanConfig {
 				.route(r -> r.path("/api/student/**")
 						.uri("lb://servicio-estudiante/")
 						.id("servicio-estudiante"))
+				.route(r -> r.path("/api/teacher/**")
+						.uri("lb://servicio-profesor/")
+						.id("servicio-profesor"))
+				.route(r -> r.path("/api/course/**")
+						.uri("lb://servicio-curso/")
+						.id("servicio-curso"))
 				.build();
 	}
 }
